@@ -177,13 +177,45 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Lab-0:-Introduction-to-Pandas-and-IPython">Lab 0: Introduction to Pandas and IPython<a class="anchor-link" href="#Lab-0:-Introduction-to-Pandas-and-IPython">&#182;</a></h1><p>This lab guide assumes two things:</p>
+<div class=question>
+<h1>OpenIntro Statistics in Python</h1>
+<h2>Lab 0: Introduction to Pandas and IPython</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This lab guide assumes two things:</p>
 <ol>
 <li>a (very) basic familiarity with Python and the command line, but no more than that.</li>
 <li>that you have installed the <a href="http://docs.continuum.io/anaconda/" title="Anaconda Python">Anaconda distribution</a>
 of Python for your computer. The dependencies for Python's scientific computing stack are complicated and this is the easiest option to get up-and-running.</li>
 </ol>
-<h2 id="Installing-Pandas-and-IPython-in-a-virtual-environment">Installing Pandas and IPython in a virtual environment<a class="anchor-link" href="#Installing-Pandas-and-IPython-in-a-virtual-environment">&#182;</a></h2><p>To make sure that this lab guide works on your computer, and to allow you to keep modules in one Python project separate from those in another, we will create a 'virtual environment' using Anaconda. This creates a safe laboratory space in which you can install whatever packages you find useful for statistical analysis, without worrying that these will break something elsewhere.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="heading">
+<h2>Installing Pandas and IPython in a virtual environment</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To make sure that this lab guide works on your computer, and to allow you to keep modules in one Python project separate from those in another, we will create a 'virtual environment' using Anaconda. This creates a safe laboratory space in which you can install whatever packages you find useful for statistical analysis, without worrying that these will break something elsewhere.</p>
 <p>Open a command prompt or terminal and create a virtual environment called <code>openintrolabs</code> by using this command:</p>
 
 <pre><code>conda create -n openintrolabs python=3.4</code></pre>
@@ -194,6 +226,11 @@ of Python for your computer. The dependencies for Python's scientific computing 
 <p>Or, if you are using a Linux distribution:</p>
 
 <pre><code>source activate openintrolabs</code></pre>
+<p>When a virtual environment is activated, its name prepended to your terminal prompt. Like this in Windows:</p>
+<p><img src="images/windows-env.png"/></p>
+<p>Or like this in Linux:</p>
+<p><img src="images/linux-env.png"/></p>
+<p>You can exit a virtual environment by using the command <code>deactivate</code>. You can try that now but, afterwards, reactivate the openintrolabs environment with <code>activate openintrolabs</code> (or <code>source activate openintrolabs</code> on Linux) so that we can carry on with the Lab.</p>
 <p>Now let's install a few packages into our base Python environment:</p>
 <ul>
 <li>Pandas, a data analysis toolkit.</li>
@@ -208,7 +245,27 @@ conda install ipython-notebook
 conda install matplotlib
 conda install statsmodels</code></pre>
 <p>We should now have a working environment for data analysis. Let's get started!</p>
-<h2 id="Getting-started-with-Pandas-and-IPython">Getting started with Pandas and IPython<a class="anchor-link" href="#Getting-started-with-Pandas-and-IPython">&#182;</a></h2><p>We'll conduct our data analysis in IPython 'notebooks'. As the name suggests, you can <em>write</em> in IPython notebooks, but you can also use them to execute Python code and display visualizations or other graphics. They are a powerful tool for data exploration and statistical analysis.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="heading">
+<h2>Getting started with Pandas and IPython</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We'll conduct our data analysis in IPython 'notebooks'. As the name suggests, you can <em>write</em> in IPython notebooks, but you can also use them to execute Python code and display visualizations or other graphics. They are a powerful tool for data exploration and statistical analysis.</p>
 <p>Start the notebook server by, first, navigating to a convenient working folder on the command line and then executing the following command in your virtual environment. (After doing so, you will need to keep the terminal running as you work.)</p>
 
 <pre><code>ipython notebook</code></pre>
@@ -230,7 +287,7 @@ conda install statsmodels</code></pre>
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="c"># Getting started with Pandas and IPython</span>
+<div class=" highlight hl-ipython3"><pre><span class="c"># Getting started with Pandas and IPython</span>
 </pre></div>
 
 </div>
@@ -243,7 +300,7 @@ conda install statsmodels</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Press shift and enter to run this cell. The <code>#</code> is Markdown code for a large heading and so IPython renders this text as a nice big title for our notebook.</p>
+<p>Press <strong>shift and enter</strong> to run this cell. The <code>#</code> is Markdown code for a large heading and so IPython renders this text as a nice big title for our notebook.</p>
 <p>Now let's run some Python code and get started with data analysis.</p>
 <p>Input these lines into the first cell after your heading and run the cell:</p>
 
@@ -252,10 +309,10 @@ conda install statsmodels</code></pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 
@@ -271,17 +328,37 @@ conda install statsmodels</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>These lines import pandas, the data analysis library and, by convention, rename it to pd. Now when we call pandas functions, we will call pd. It saves us four whole keystrokes.</p>
 <p>The second line tells IPython to draw graphs in the notebook itself rather than creating separate windows each time.</p>
-<h2 id="Reading-data-into-Pandas">Reading data into Pandas<a class="anchor-link" href="#Reading-data-into-Pandas">&#182;</a></h2><p>We can now start working with data. In a new cell enter and execute the following code:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="heading">
+<h2>Reading data into Pandas</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can now start working with data. In a new cell enter and execute the following code:</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">present_url</span> <span class="o">=</span> <span class="s">&#39;https://github.com/ScatteredInk/OpenIntro-Python-Labs/raw/master/Lab0/present.csv&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span class="n">present_url</span> <span class="o">=</span> <span class="s">&#39;https://github.com/ScatteredInk/OpenIntro-Python-Labs/raw/master/Lab0/present.csv&#39;</span>
 
 <span class="n">present</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">present_url</span><span class="p">)</span>
 
@@ -289,6 +366,64 @@ conda install statsmodels</code></pre>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year</th>
+      <th>boys</th>
+      <th>girls</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td> 1940</td>
+      <td> 1211684</td>
+      <td> 1148715</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td> 1941</td>
+      <td> 1289734</td>
+      <td> 1223693</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td> 1942</td>
+      <td> 1444365</td>
+      <td> 1364631</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td> 1943</td>
+      <td> 1508959</td>
+      <td> 1427901</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td> 1944</td>
+      <td> 1435301</td>
+      <td> 1359499</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -303,15 +438,1670 @@ conda install statsmodels</code></pre>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+ <div class="heading">
+<h2> Present Data</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The present data set refers to the number of male and female births in the United States. The data set contains the data for all years from 1940 to 2002. We can take a look at the data by typing the variable name into a cell and executing.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre> 
+<div class=" highlight hl-ipython3"><pre><span class="n">present</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What you should see are four columns of numbers, each row representing a different year: the first entry in each row is simply the row number (an index we can use to access the data from individual years if we want), the second is the year, and the third and fourth are the numbers of boys and girls born that year, respectively. Use the scrollbar on the right side of the console window to examine the head and tail of this data set. A row of ellipses represents the middle of this data, removed from this summary view.</p>
+<p>Note that the row numbers in the first column are not part of the present data set. Pandas adds them as part of its data model. You can think of them as the index that you see on the left side of a spreadsheet. In fact, the comparison to a spreadsheet will generally be helpful. Pandas has stored the data in a kind of spreadsheet or table called a <strong>DataFrame</strong>.</p>
+<p>You can see the dimensions of this DataFrame by typing:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">present</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(63, 3)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The output (63, 3) indicates that there are 63 rows and 3 columns. You can see the names of these columns by typing:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">present</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&apos;year&apos;, &apos;boys&apos;, &apos;girls&apos;]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="question">
+<div><h3 class = "question-title">Question 1</h3></div>
+<div>How many variables are included in this data set?: </div>
+<ul class="questions">
+<li>A) 2</li> 
+<li>B) 3</li> 
+<li>C) 4</li> 
+<li>D) 63</li> 
+<li>E) 2002</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="heading">
+<h2>Some Exploration</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let’s start to examine the data a little more closely. We can access the data in a single column of a data frame separately using a command like</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This command will only show the number of boys born each year.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">present</span><span class="p">[</span><span class="s">&#39;boys&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[40]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0     1211684
+1     1289734
+2     1444365
+3     1508959
+4     1435301
+5     1404587
+6     1691220
+7     1899876
+8     1813852
+9     1826352
+10    1823555
+11    1923020
+12    1971262
+13    2001798
+14    2059068
+...
+48    2002424
+49    2069490
+50    2129495
+51    2101518
+52    2082097
+53    2048861
+54    2022589
+55    1996355
+56    1990480
+57    1985596
+58    2016205
+59    2026854
+60    2076969
+61    2057922
+62    2057979
+Name: boys, Length: 63, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="question">
+
+<div><h3 class="question-title">Question 2</h3></div>
+<div>What command would you use to extract just the counts of girls births?</div>
+
+<p><ul class = questions></p>
+<p><li>A) <code>present['girls']</code></li></p>
+<p><li>B) <code>present['boys']</code></li></p>
+<p><li>C) <code>girls</code></li></p>
+<p><li>D) <code>present[girls]</code></li></p>
+<p><li>E) <code>'girls'</code></li>
+</ul>
+</div></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Notice that the way Pandas has printed these data is different. When we looked at the the DataFrame, we saw the rows of a table, one on each line of the display, with their headings. These data are no longer structured in a table with other variables, so they are displayed as a single object called a Series. Its name ('boys') and datatype ('int64') are displayed at the bottom. Pandas prints numbers on the left, the index, to indicate locations of data within the the series. For example, 1211684 follows 0, indicating that 1211684 is at index entry 1 in the series (as elsewhere in Python, Pandas indexing begins at zero). And if 48 starts a line, then that would mean the first number on that line would represent the 48th entry in the series.</p>
+<p>We can see that present and the columns of present are different data types by inputting the following commands:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="nb">type</span><span class="p">(</span><span class="n">present</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[44]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>pandas.core.frame.DataFrame</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="nb">type</span><span class="p">(</span><span class="n">present</span><span class="p">[</span><span class="s">&#39;boys&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[43]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>pandas.core.series.Series</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+ <div class="heading">
+<h2> Visualizing data</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Pandas has some powerful functions for making graphics. To make these easier to use, we will set the <strong>index</strong> of our DataFrame to the 'year' column of our dataset. This is makes more sense than the arbitrary 0 to 62 numbering that we had before.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">present</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s">&#39;year&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Have a look at the <code>present</code> DataFrame with the following commands.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">present</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[53]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>boys</th>
+      <th>girls</th>
+    </tr>
+    <tr>
+      <th>year</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1940</th>
+      <td> 1211684</td>
+      <td> 1148715</td>
+    </tr>
+    <tr>
+      <th>1941</th>
+      <td> 1289734</td>
+      <td> 1223693</td>
+    </tr>
+    <tr>
+      <th>1942</th>
+      <td> 1444365</td>
+      <td> 1364631</td>
+    </tr>
+    <tr>
+      <th>1943</th>
+      <td> 1508959</td>
+      <td> 1427901</td>
+    </tr>
+    <tr>
+      <th>1944</th>
+      <td> 1435301</td>
+      <td> 1359499</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">present</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[54]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>boys</th>
+      <th>girls</th>
+    </tr>
+    <tr>
+      <th>year</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1998</th>
+      <td> 2016205</td>
+      <td> 1925348</td>
+    </tr>
+    <tr>
+      <th>1999</th>
+      <td> 2026854</td>
+      <td> 1932563</td>
+    </tr>
+    <tr>
+      <th>2000</th>
+      <td> 2076969</td>
+      <td> 1981845</td>
+    </tr>
+    <tr>
+      <th>2001</th>
+      <td> 2057922</td>
+      <td> 1968011</td>
+    </tr>
+    <tr>
+      <th>2002</th>
+      <td> 2057979</td>
+      <td> 1963747</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Our index is now the years 1940 through 2002. The same index is also applied to the individual Series that make up the DataFrame.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">present</span><span class="p">[</span><span class="s">&#39;boys&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[56]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>year
+1940    1211684
+1941    1289734
+1942    1444365
+1943    1508959
+1944    1435301
+Name: boys, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can plot the number of girls born per year with the following command.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">present</span><span class="p">[</span><span class="s">&#39;girls&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[66]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fa29b54cb00&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+RK5CYII=
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To add a legend to this plot, the command is <code>present['girls'].plot(legend=True)</code>. You might wonder how you are supposed to know that it was possible to add that argument. Thankfully, the Pandas documention is available online and can also be accessed from within IPython. To read what a function does and learn the arguments that are available to you, just type in a question mark before or after the name of the function that you’re interested in: <code>pd.DataFrame.plot?</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="question">
+<div><h3 class="question-title">Question 3</h3></div>
+<div>Is there an apparent trend in the number of girls born over the years? How would you describe it?</div>
+<ul class="questions">
+<li>A) There appears to be no trend in the number of girls born from 1940 to 2002.</li>
+<li>B) There is initially an increase in the number of girls born, which peaks around 1960. After 1960 there is a decrease in the number of girls born, but the number begins to increase again in the early 1970s. Overall the trend is an increase in the number of girls born in the US since the 1940s.</li>
+<li>C) There is initially an increase in the number of girls born. This number peaks around 1960 and then after 1960 the number of girls born decreases.</li>
+<li>D) The number of girls born has decreased over time.</li>
+<li>E) There is an initial increase in the number of girls born but this number appears to level around 1960 and not change since then.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now, suppose we want to plot the total number of births. To compute this, we could use the fact that IPython is really just a big calculator. We can type in mathematical expressions like</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="mi">1211684</span> <span class="o">+</span> <span class="mi">1148715</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[67]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2360399</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>What you will see is a Series of length 63 (not all of which will be printed), each one representing the sum we’re after. Take a look at a few of them and verify that they are right. Therefore, we can make a plot by assigning this sum to its own variable and of the total number of births per year with the following command:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">combined_births</span> <span class="o">=</span> <span class="n">present</span><span class="p">[</span><span class="s">&#39;boys&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">present</span><span class="p">[</span><span class="s">&#39;girls&#39;</span><span class="p">]</span>
+<span class="n">combined_births</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[80]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7fa29b219160&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In the above expression we create a new Series object, assign it to <code>combined_births</code> and then call the plot function for Series objects.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="heading">
+<h2>Finding minima and maxima</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can see a summary of our DataFrame, including the minimum and maximum values in each column, with the describe() function.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[83]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">present</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[83]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div style="max-height:1000px;max-width:1500px;overflow:auto;">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>boys</th>
+      <th>girls</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>      63.000000</td>
+      <td>      63.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td> 1885599.619048</td>
+      <td> 1793915.015873</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>  226511.422927</td>
+      <td>  218559.840911</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td> 1211684.000000</td>
+      <td> 1148715.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td> 1799857.000000</td>
+      <td> 1711404.500000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td> 1924868.000000</td>
+      <td> 1831679.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td> 2058523.500000</td>
+      <td> 1965537.500000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td> 2186274.000000</td>
+      <td> 2082052.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>But how do we <em>when</em> these minimum or maximum values occured? To do this we can use the idxmin() and idxmax() functions, which give us the index values at the min or max. The code to find the year when the most number of girls were born is:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[86]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">present</span><span class="p">[</span><span class="s">&#39;girls&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[86]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1961</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="question">
+<div><h3 class="question-title">Question 4</h3></div>
+<div>In what year did we see the most total number of births in the U.S.? Use the `combined_births` variable we have already created and the functions just introduced to answer this question.</div>
+<ul class="questions">
+<li>A) 1961</li> 
+<li>B) 1960</li> 
+<li>C) 1957</li> 
+<li>D) 1991</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Similarly to how we computed the proportion of boys, we can compute the ratio of the number of boys to the number of girls born in 1940 with:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[92]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="mi">1211684</span><span class="o">/</span><span class="mi">1148715</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[92]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.0548169041058921</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">present</span><span class="p">[</span><span class="s">&#39;boys&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">present</span><span class="p">[</span><span class="s">&#39;girls&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The proportion of newborns that were boys in 1940 can be calculated with:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[93]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="mi">1211684</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1211684</span> <span class="o">+</span> <span class="mi">1148715</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[93]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.5133386346969305</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Or this may also be calculated for all years simultaneously:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">present</span><span class="p">[</span><span class="s">&#39;boys&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">present</span><span class="p">[</span><span class="s">&#39;boys&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">present</span><span class="p">[</span><span class="s">&#39;girls&#39;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that with IPython, as with your calculator, you need to be conscious of the order of operations. Here, we want to divide the number of boys by the total number of newborns, so we have to use parentheses. Without them, Python will first do the division, then the addition, giving you something that is not a proportion.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="question">
+<div><h3 class="question-title">Question 5</h3></div>
+<div>Now, create a new variable containing the proportion of boys over time, plot this Series, and based on the plot determine if the following statement is true or false: The proportion of boys born in the US has decreased over time.</div>
+<ul class="questions">
+<li>True</li>
+<li>False</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Finally, in addition to simple mathematical operators like subtraction and division, you can ask Pandas to make comparisons like greater than, <code>&gt;</code>, less than, <code>&lt;</code>, and equality, <code>==</code>. For example, we can ask if boys outnumber girls in each year with the expression:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="n">present</span><span class="p">[</span><span class="s">&#39;boys&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">present</span><span class="p">[</span><span class="s">&#39;girls&#39;</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This command returns a Series of 63 boolean values. The value is either True if that year had more boys than girls, or False if that year did not. This output shows a different kind of data than we have considered so far. In the DataFrame our values are numerical (the year, the number of boys and girls). Here, we’ve asked Pandas to create logical data, data where the values are either True or False. In general, data analysis will involve many different kinds of data types, and one reason for using Pandas is that it is able to represent and compute with many of them.</p>
+<p>One way of quickly analysing boolean data is with the value_counts function. This returns an object containing counts of unique values in a Series.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="p">(</span><span class="n">present</span><span class="p">[</span><span class="s">&#39;boys&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">present</span><span class="p">[</span><span class="s">&#39;girls&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="question">
+<div><h3 class="question-title">Question 6</h3></div>
+<div>Which statesment is true?</div>
+<ul class="questions">
+<li>A) Every year there are more girls born than boys.</li>
+<li>B) Every year there are more boys born than girls.</li>
+<li>C) Half of the years there are more boys born, and the other half more girls born.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now try to answer the following questions without additional guidance on the coding, based on what you have learned so far.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="question">
+<div><h3 class="question-title">Question 7</h3></div>
+<div>Make a plot that displays the boy-to-girl ratio for every year in the data set. What do you see? </div>
+<ul class="questions">
+<li>A) There appears to be no trend in the boy-to-girl ratio from 1940 to 2002.</li>
+<li>B) There is initially an increase in boy-to-girl ratio, which peaks around 1960. After 1960 there is a decrease in the boy-to-girl ratio, but the number begins to increase in the mid 1970s.</li>
+<li>C) There is initially a decrease in the boy-to-girl ratio, and then an increase between 1960 and 1970, followed by a decrease.</li>
+<li>D) The boy-to-girl ratio has increased over time.</li>
+<li>E) There is an initial decrease in the boy-to-girl ratio born but this number appears to level around 1960 and remain constant since then.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="question">
+<div><h3 class="question-title">Question 8</h3></div>
+<div>Calculate absolute differences between number of boys and girls born in each year, and determine which year out of the present data had the biggest absolute difference in the number of girls and number of boys born?</div>
+<ul class="questions">
+<li>A) 1963</li>
+<li>B) 1946</li>
+<li>C) 2002</li>
+<li>D) 1940</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>These data come from a <a href="http://www.cdc.gov/nchs/data/nvsr/nvsr53/nvsr53_20.pdf">report</a> by the Centers for Disease Control. Check it out if you would like to read more about an analysis of sex ratios at birth in the United States.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="attribution">
+This lab was adapted for Python Pandas by Jack Lord from the original  OpenIntro product. The source code is on [Github](https://github.com/ScatteredInk/OpenIntro-Python-Labs). It is released under a Creative Commons Attribution-ShareAlike 3.0 Unported license. The original lab was adapted for OpenIntro by Andrew Bray and Mine Çetinkaya-Rundel from a lab written by Mark Hansen of UCLA Statistics.
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[104]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">HTML</span>
+<span class="k">def</span> <span class="nf">css_styling</span><span class="p">():</span>
+    <span class="n">styles</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;./styles/custom.css&quot;</span><span class="p">,</span> <span class="s">&quot;r&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">HTML</span><span class="p">(</span><span class="n">styles</span><span class="p">)</span>
+<span class="n">css_styling</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[104]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<style>
+div.question {    
+    background-color: #DDECEF;
+    border-color: #0099CC;
+    border-left: 5px solid #0099CC;
+    padding: 0.5em;
+    
+        }
+ </style>
+
+<style>
+h3.question-title {
+	color: white;
+	margin-bottom: 0.5em;
+	background-color: #0099CC;
+
+}
+</style>
+
+<style>
+ul.questions {
+	list-style-type: none;
+}
+</style>
+
+<style>
+div.attribution {
+	background-color:#E8E8E8;
+	padding: 0.5em;
+	border-color: #565B5B;
+	border-left: 5px solid #565B5B;
+}
+</style>
+
+<style>
+div.heading {
+	background-color: #eac7d5;
+	padding: 0.5em;
+	border-color: ##BC4676;
+	border-left: 5px solid #BC4676;
+}
+</div>
+
+</div>
+
 </div>
 </div>
 
