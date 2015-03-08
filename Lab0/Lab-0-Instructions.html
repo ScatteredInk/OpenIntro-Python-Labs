@@ -192,8 +192,7 @@ div#notebook {
 <p>This lab guide assumes two things:</p>
 <ol>
 <li>a (very) basic familiarity with Python and the command line, but no more than that.</li>
-<li>that you have installed the <a href="http://docs.continuum.io/anaconda/" title="Anaconda Python">Anaconda distribution</a>
-of Python for your computer. The dependencies for Python's scientific computing stack are complicated and this is the easiest option to get up-and-running.</li>
+<li>that you have installed the <a href="http://docs.continuum.io/anaconda">Anaconda distribution</a> of Python for your computer. The dependencies for Python's scientific computing stack are complicated and this is the easiest option to get up-and-running.</li>
 </ol>
 
 </div>
@@ -274,9 +273,9 @@ conda install statsmodels</code></pre>
 <p>Create a notebook by clicking 'new' in the top right-hand corner and then selecting 'Python 3' under 'Notebooks'. This will open a new tab which contains a notebook, ready for us to work in.</p>
 <p><img src="images/ipython_0.png"/></p>
 <p>At the top of the screen 'Untitled' is the name of our notebook. We can change this by clicking on it.</p>
-<p>The white rectange labelled <code>In [ ]:</code> is a cell. A cell is where we enter code or text.</p>
+<p>The white rectange labelled <code>In [ ]:</code> is a cell. A cell is where we enter code or text. We can enter multiple lines of code in a single cell, or in many cells, before choosing to execute them.</p>
 <p>More cells can be added with the + button on the toolbar and cells can be rearranged with the up and down arrows.</p>
-<p>The cell input type (code or Markdown text) can be changed using the dropdown menu that is set to 'Code' by default.</p>
+<p>The cell input type (code or Markdown text) can be changed using the dropdown menu. This menu is set to 'Code' by default.</p>
 <p>Click into the first cell, change the type to Markdown and enter the following text:</p>
 
 </div>
@@ -454,7 +453,7 @@ conda install statsmodels</code></pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The present data set refers to the number of male and female births in the United States. The data set contains the data for all years from 1940 to 2002. We can take a look at the data by typing the variable name into a cell and executing.</p>
+<p>The present data set refers to the number of male and female births to mothers of Hispanic origin in the United States. The data set contains the data for all years from 1940 to 2002. We can take a look at the data by typing the variable name into a cell and executing.</p>
 
 </div>
 </div>
@@ -592,16 +591,6 @@ conda install statsmodels</code></pre>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>This command will only show the number of boys born each year.</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[40]:</div>
@@ -661,6 +650,16 @@ Name: boys, Length: 63, dtype: int64</pre>
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This command shows only the number of boys born each year.</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -769,7 +768,7 @@ Name: boys, Length: 63, dtype: int64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Pandas has some powerful functions for making graphics. To make these easier to use, we will set the <strong>index</strong> of our DataFrame to the 'year' column of our dataset. This is makes more sense than the arbitrary 0 to 62 numbering that we had before.</p>
+<p>Pandas has some powerful functions for making graphics. To make these easier to use, we will set the <strong>index</strong> of our DataFrame to the 'year' column of our dataset. This makes more sense than the arbitrary 0 to 62 numbering that we had before.</p>
 
 </div>
 </div>
@@ -1332,7 +1331,7 @@ RK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>What you will see is a Series of length 63 (not all of which will be printed), each one representing the sum we’re after. Take a look at a few of them and verify that they are right. Therefore, we can make a plot by assigning this sum to its own variable and of the total number of births per year with the following command:</p>
+<p>What you will see is a Series of length 63 (not all of which will be printed), each one representing the sum we’re after. Take a look at a few of them and verify that they are right. Therefore, we can make a plot of the total number of births per year by assigning this sum to its own variable and then calling the plot function on it:</p>
 
 </div>
 </div>
@@ -2029,7 +2028,7 @@ M7O6udIwM7O6udIwM7O6/X/PAr6/nqlxnQAAAABJRU5ErkJggg==
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div class="attribution">
-This lab was adapted for Python Pandas by Jack Lord from the original  OpenIntro product. The source code is on [Github](https://github.com/ScatteredInk/OpenIntro-Python-Labs). It is released under a Creative Commons Attribution-ShareAlike 3.0 Unported license. The original lab was adapted for OpenIntro by Andrew Bray and Mine Çetinkaya-Rundel from a lab written by Mark Hansen of UCLA Statistics.
+This lab was adapted for Python Pandas by Jack Lord from the original  OpenIntro product. The source code is on <a href="https://github.com/ScatteredInk/OpenIntro-Python-Labs">Github</a>. It is released under a Creative Commons Attribution-ShareAlike 3.0 Unported license. The original lab was adapted for OpenIntro by Andrew Bray and Mine Çetinkaya-Rundel from a lab written by Mark Hansen of UCLA Statistics.
 </div>
 </div>
 </div>
